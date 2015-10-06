@@ -1,5 +1,5 @@
 {
-  "name": "mongo-query-2-sql-query-converter",
+  "name": "mongo2sql",
   "version": "1.0.0",
   "description": "## Why?",
   "main": "mongo-2-sql.js",
