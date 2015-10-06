@@ -1,4 +1,6 @@
-# mongo-query-2-sql
+# mongo2sql
+
+Convert a query expressed in MongoDB query language to a query expressed in SQL language.
 
 ## Why?
 
