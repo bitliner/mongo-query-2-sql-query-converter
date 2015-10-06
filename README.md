@@ -13,6 +13,6 @@
 
 ## Roadmap
 
-* simple query without operators - e.g. {text:'ciao', page:0}
+* ~~simple query without operators - e.g. {text:'ciao', page:0}~~
 * query with operators, but without $and, $or operators
 * query including $and, $or operators
