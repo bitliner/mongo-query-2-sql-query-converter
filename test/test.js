@@ -11,7 +11,7 @@ describe('MongoToSql', function() {
 	it('should convert a query', function() {
 
 
-		var data = [{
+		var data = [{ // without operators
 			mongo: {
 				collection: 'coll1',
 				query: {
