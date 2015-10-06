@@ -1,6 +1,13 @@
 /* jshint node:true */
 'use strict';
 
+var translation = {
+	$gt: '>',
+	$gte: '>=',
+	$lt: '<',
+	$lte: '<='
+};
+
 module.exports.convert = function(collectionName, query, fields) {
 	var select = [];
 	var from = [];
@@ -25,13 +32,21 @@ var calculateWhere = function(queryObj) { // , level) {
 
 	Object.keys(queryObj).forEach(function(key) {
 		var value;
+		var operator, mongoOperator;
 
 		value = queryObj[key];
 		value = (typeof value === 'string') ? '"' + value + '"' : value;
-		// if (typeof value==='object' && value.constructor && value.constructor.name==='Object'){
+		if (typeof value !== 'object') {
+			operator = '=';
+		} else if (value.constructor && value.constructor.name === 'Object' && Object.keys(value).length === 1) {
+			mongoOperator = Object.keys(value)[0];
+			operator = translation[mongoOperator];
+			value = value[mongoOperator];
+		}
+		// if (typeof value==='object' && ){
 
 		// }
-		result.push(key + '=' + value);
+		result.push(key + operator + value);
 	});
 
 	return 'WHERE ' + result.join(' and ');
