@@ -1,0 +1,19 @@
+{
+  "name": "mongo-query-2-sql-query-converter",
+  "version": "1.0.0",
+  "description": "## Why?",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitliner/mongo-query-2-sql-query-converter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bitliner/mongo-query-2-sql-query-converter/issues"
+  },
+  "homepage": "https://github.com/bitliner/mongo-query-2-sql-query-converter#readme"
+}
